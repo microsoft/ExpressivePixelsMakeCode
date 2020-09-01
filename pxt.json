@@ -1,0 +1,29 @@
+{
+    "name": "EPXDisplay",
+    "version": "0.1.1",
+    "description": "Expressive Pixels WS2812 display driver",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.1"
+    },
+    "files": [
+        "README.md",
+        "EPXDisplay.ts",
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj",
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    }
+}
+
