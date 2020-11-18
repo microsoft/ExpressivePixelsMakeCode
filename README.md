@@ -21,7 +21,7 @@ Select the Expressive Pixels section in the block picker
 
 Add the following blocks to the On Start section: The main Set EPXDisplay; A digital write pin on P1 i your display supports power enablement; and the powerupclear with low brightness to ensure the display array is cleared and set to a nominal brightness.
 
-<img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Button.png" style="float: left;" />
+<img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Startup.png" style="float: left;" />
 
 ## Copy the animation from Expressive Pixels application 
 
