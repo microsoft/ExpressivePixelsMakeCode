@@ -9,7 +9,7 @@
     },
     "files": [
         "README.md",
-        "EPXDisplay.ts",
+        "EPXDisplay.ts"
     ],
     "public": true,
     "supportedTargets": [
