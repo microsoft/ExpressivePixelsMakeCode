@@ -390,6 +390,7 @@ namespace EPXDisplay {
          * You need to call ``show`` to make the changes visible.
          */
         //% blockId="EPXDisplay_powerupclear" block="%display|powerupclear with brightness %brightness "
+        //% help=github:github.com/microsoft/ExpressivePixelsMakeCode/blob/master/HelpStartup.md
         //% strip.defl=display
         //% weight=89
         //% parts="EPXDisplay"
