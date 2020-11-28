@@ -11,7 +11,7 @@ After creating you new MakeCode project, add the Expressive Pixels Extension by 
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Extension.png" style="float: left;" />
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-ExtensionURL.png" style="float: left;"  width="300"/>
 
-https://github.com/microsoft/ExpressivePixels/tree/master/MakeCode
+https://github.com/microsoft/ExpressivePixelsMakeCode 
 
 ## Add Startup Blocks
 
