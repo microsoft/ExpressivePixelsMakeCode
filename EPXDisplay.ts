@@ -1,7 +1,7 @@
 /**
  * Well known colors for a NeoPixel strip
  */
-enum NeoPixelColors {
+enum EPXNeoPixelColors {
     //% block=red
     Red = 0xFF0000,
     //% block=orange
@@ -27,7 +27,7 @@ enum NeoPixelColors {
 /**
  * Different modes for RGB or RGB+W NeoPixel strips
  */
-enum NeoPixelMode {
+enum EPXNeoPixelMode {
     //% block="RGB (GRB format)"
     RGB = 1,
     //% block="RGB+W"
@@ -51,7 +51,7 @@ namespace EPXDisplay {
         brightness: number;
         start: number; // start offset in LED strip
         _length: number; // number of LEDs
-        _mode: NeoPixelMode;
+        _mode: EPXNeoPixelMode;
         _matrixWidth: number; // number of leds in a matrix - if any
 
         /**
@@ -267,7 +267,7 @@ namespace EPXDisplay {
         showBarGraph(value: number, high: number): void {
             if (high <= 0) {
                 this.clear();
-                this.setPixelColor(0, NeoPixelColors.Yellow);
+                this.setPixelColor(0, EPXNeoPixelColors.Yellow);
                 this.show();
                 return;
             }
@@ -353,7 +353,7 @@ namespace EPXDisplay {
         //% weight=80
         //% parts="EPXDisplay" advanced=true
         setPixelWhiteLED(pixeloffset: number, white: number): void {
-            if (this._mode === NeoPixelMode.RGBW) {
+            if (this._mode === EPXNeoPixelMode.RGBW) {
                 this.setPixelW(pixeloffset >> 0, white >> 0);
             }
         }
@@ -380,7 +380,7 @@ namespace EPXDisplay {
         //% weight=86
         //% parts="EPXDisplay"
         clear(): void {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const stride = this._mode === EPXNeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
         }
 
@@ -432,7 +432,7 @@ namespace EPXDisplay {
         //% weight=58
         //% parts="EPXDisplay" advanced=true
         easeBrightness(): void {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const stride = this._mode === EPXNeoPixelMode.RGBW ? 4 : 3;
             const br = this.brightness;
             const buf = this.buf;
             const end = this.start + this._length;
@@ -464,7 +464,7 @@ namespace EPXDisplay {
         //% parts="EPXDisplay"
         shift(offset: number = 1): void {
             offset = offset >> 0;
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const stride = this._mode === EPXNeoPixelMode.RGBW ? 4 : 3;
             this.buf.shift(-offset * stride, this.start * stride, this._length * stride)
         }
 
@@ -479,7 +479,7 @@ namespace EPXDisplay {
         //% parts="EPXDisplay"
         rotate(offset: number = 1): void {
             offset = offset >> 0;
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const stride = this._mode === EPXNeoPixelMode.RGBW ? 4 : 3;
             this.buf.rotate(-offset * stride, this.start * stride, this._length * stride)
         }
 
@@ -496,7 +496,7 @@ namespace EPXDisplay {
 
   
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
-            if (this._mode === NeoPixelMode.RGB_RGB) {
+            if (this._mode === EPXNeoPixelMode.RGB_RGB) {
                 this.buf[offset + 0] = red;
                 this.buf[offset + 1] = green;
             } else {
@@ -518,13 +518,13 @@ namespace EPXDisplay {
                 blue = (blue * br) >> 8;
             }
             const end = this.start + this._length;
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const stride = this._mode === EPXNeoPixelMode.RGBW ? 4 : 3;
             for (let i = this.start; i < end; ++i) {
                 this.setBufferRGB(i * stride, red, green, blue)
             }
         }
         private setAllW(white: number) {
-            if (this._mode !== NeoPixelMode.RGBW)
+            if (this._mode !== EPXNeoPixelMode.RGBW)
                 return;
 
             let br = this.brightness;
@@ -543,7 +543,7 @@ namespace EPXDisplay {
                 || pixeloffset >= this._length)
                 return;
 
-            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            let stride = this._mode === EPXNeoPixelMode.RGBW ? 4 : 3;
             pixeloffset = (pixeloffset + this.start) * stride;
 
             let red = unpackR(rgb);
@@ -559,7 +559,7 @@ namespace EPXDisplay {
             this.setBufferRGB(pixeloffset, red, green, blue)
         }
         private setPixelW(pixeloffset: number, white: number): void {
-            if (this._mode !== NeoPixelMode.RGBW)
+            if (this._mode !== EPXNeoPixelMode.RGBW)
                 return;
 
             if (pixeloffset < 0
@@ -592,13 +592,13 @@ namespace EPXDisplay {
     //% parts="EPXDisplay"
     //% trackArgs=0,2
     //% blockSetVariable=display
-    export function create(pin: DigitalPin, numleds: number, mode: NeoPixelMode): Strip {
+    export function create(pin: DigitalPin, numleds: number, mode: EPXNeoPixelMode): Strip {
         let strip = new Strip();
-        let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
+        let stride = mode === EPXNeoPixelMode.RGBW ? 4 : 3;
         strip.buf = pins.createBuffer(numleds * stride);
         strip.start = 0;
         strip._length = numleds;
-        strip._mode = mode || NeoPixelMode.RGB;
+        strip._mode = mode || EPXNeoPixelMode.RGB;
         strip._matrixWidth = 0;
         strip.setBrightness(128)
         strip.setPin(pin)
@@ -624,7 +624,7 @@ namespace EPXDisplay {
     //% weight=2 blockGap=8
     //% blockId="EPXDisplay_colors" block="%color"
     //% advanced=true
-    export function colors(color: NeoPixelColors): number {
+    export function colors(color: EPXNeoPixelColors): number {
         return color;
     }
 
