@@ -588,6 +588,7 @@ namespace EPXDisplay {
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
     //% blockId="EPXDisplay_create" block="EPXDisplay at pin %pin|with %numleds|leds as %mode"
+    //% help=github:github.com/microsoft/ExpressivePixelsMakeCode/blob/master/HelpStartup.md
     //% weight=90 blockGap=8
     //% parts="EPXDisplay"
     //% trackArgs=0,2
