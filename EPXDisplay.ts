@@ -74,7 +74,7 @@ namespace EPXDisplay {
          */
         //% blockId="expressivepixels_play" block="%display|play animation %animation" blockGap=8
         //% strip.defl=display
-        //% weight=79
+        //% weight=88
         //% parts="EPXDisplay"
         play(anim: Buffer) {
             const length = anim.length;
@@ -363,7 +363,7 @@ namespace EPXDisplay {
          */
         //% blockId="EPXDisplay_show" block="%display|show" blockGap=8
         //% strip.defl=display
-        //% weight=79
+        //% weight=87
         //% parts="EPXDisplay"
         show() {
             // only supported in beta
@@ -377,7 +377,7 @@ namespace EPXDisplay {
          */
         //% blockId="EPXDisplay_clear" block="%display|clear"
         //% strip.defl=display
-        //% weight=76
+        //% weight=86
         //% parts="EPXDisplay"
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
@@ -391,7 +391,7 @@ namespace EPXDisplay {
          */
         //% blockId="EPXDisplay_powerupclear" block="%display|powerupclear with brightness %brightness "
         //% strip.defl=display
-        //% weight=76
+        //% weight=89
         //% parts="EPXDisplay"
         powerupclear(brightness: number): void {
             this.setBrightness(brightness);
