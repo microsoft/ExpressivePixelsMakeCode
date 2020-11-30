@@ -1,6 +1,6 @@
 {
     "name": "EPXDisplay",
-    "version": "0.7.3",
+    "version": "1.0.0",
     "description": "Expressive Pixels WS2812 display driver",
     "license": "MIT",
     "dependencies": {
