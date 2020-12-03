@@ -9,7 +9,9 @@
     },
     "files": [
         "README.md",
-        "EPXDisplay.ts"
+        "EPXDisplay.ts",
+        "animations.ts",
+        "test.ts"
     ],
     "public": true,
     "supportedTargets": [
@@ -26,4 +28,3 @@
         }
     }
 }
-
