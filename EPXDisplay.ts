@@ -12,7 +12,6 @@ namespace EPXDisplay {
              * Play an animation.
              */
             //% blockId="expressivepixels_play" block="%display|play animation %animation" blockGap=8
-            //% strip.defl=display
             //% weight=88
             play(anim: Buffer) {
                 const length = anim.length;
@@ -128,7 +127,6 @@ namespace EPXDisplay {
              * Send all the changes to the display
              */
             //% blockId="EPXDisplay_show" block="%display|show" blockGap=8
-            //% strip.defl=display
             //% weight=87
             show() {
                 this.strip.show();
