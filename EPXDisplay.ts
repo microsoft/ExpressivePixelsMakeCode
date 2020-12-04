@@ -19,13 +19,15 @@ namespace EPXDisplay {
     //% weight=88
     export function play(strip: neopixel.Strip, anim: EPXAnimations) {
         switch(anim) {
-            case EPXAnimations.Globe: playBuffer(strip, spinningGlobe); break;
-            case EPXAnimations.Weather: playBuffer(strip, weather); break;
-            case EPXAnimations.ColorSpin: playBuffer(strip, smoothColorSpin); break;
+            case EPXAnimations.Globe: writeAnimation(strip, spinningGlobe); break;
+            case EPXAnimations.Weather: writeAnimation(strip, weather); break;
+            case EPXAnimations.ColorSpin: writeAnimation(strip, smoothColorSpin); break;
         }
+        strip.show();
     }
 
-    export function playBuffer(strip: neopixel.Strip, anim: Buffer) {
+    //%
+    export function writeAnimation(strip: neopixel.Strip, anim: Buffer) {
             const length = anim.length;
             let palette = [];
 
