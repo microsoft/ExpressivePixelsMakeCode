@@ -19,12 +19,26 @@ namespace EPXDisplay {
     //% weight=88
     export function play(strip: neopixel.Strip, anim: EPXAnimations) {
         switch(anim) {
-            case EPXAnimations.Globe: writeAnimation(strip, spinningGlobe); break;
-            case EPXAnimations.Weather: writeAnimation(strip, weather); break;
-            case EPXAnimations.ColorSpin: writeAnimation(strip, smoothColorSpin); break;
+            case EPXAnimations.Globe: writeAnimation(strip, SpinningGlobe); break;
+            case EPXAnimations.Weather: writeAnimation(strip, Weather); break;
+            case EPXAnimations.ColorSpin: writeAnimation(strip, ColorSpin); break;
         }
         strip.show();
     }
+
+    /**	
+     * Turn off all LEDs.	
+     * You need to call ``show`` to make the changes visible.	
+     */	
+    //% blockId="EPXDisplay_powerupclear" block="$strip=variables_get(strip)|powerupclear with brightness %brightness "	
+    //% help=github:github.com/microsoft/ExpressivePixelsMakeCode/blob/master/HelpStartup.md	
+    //% weight=89	
+     export function powerupclear(strip: neopixel.Strip, brightness: number): void {	
+            strip.setBrightness(brightness);	
+            strip.clear();	
+            pause(1);	
+            strip.show();	
+        }	
 
     //%
     export function writeAnimation(strip: neopixel.Strip, anim: Buffer) {
