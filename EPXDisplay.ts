@@ -14,7 +14,6 @@ namespace EPXDisplay {
             //% blockId="expressivepixels_play" block="%display|play animation %animation" blockGap=8
             //% strip.defl=display
             //% weight=88
-            //% parts="EPXDisplay"
             play(anim: Buffer) {
                 const length = anim.length;
                 let palette = [];
@@ -131,7 +130,6 @@ namespace EPXDisplay {
             //% blockId="EPXDisplay_show" block="%display|show" blockGap=8
             //% strip.defl=display
             //% weight=87
-            //% parts="EPXDisplay"
             show() {
                 this.strip.show();
             }
@@ -141,7 +139,6 @@ namespace EPXDisplay {
         //% blockId="EPXDisplay_create" block="Sparklet Display"
         //% help=github:github.com/microsoft/ExpressivePixelsMakeCode/blob/master/HelpStartup.md
         //% weight=90 blockGap=8
-        //% parts="EPXDisplay"
         //% blockSetVariable=display
         export function createMicrobitSparkletDisplay(): MicrobitSparkletDisplay {
             return new MicrobitSparkletDisplay();
