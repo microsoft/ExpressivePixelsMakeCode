@@ -1,4 +1,4 @@
-let display = createDisplay();
-playAnimation(display, weather);
-playAnimation(display, smoothColorSpin)
-playAnimation(display, spinningGlobe);
+let display = EPXAnimations.createDisplay();
+EPXAnimations.playAnimation(display, weather);
+EPXAnimations.playAnimation(display, smoothColorSpin)
+EPXAnimations.playAnimation(display, spinningGlobe);
