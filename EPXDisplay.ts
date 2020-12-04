@@ -1,11 +1,31 @@
+/**
+ * Well known colors for a NeoPixel strip
+ */
+enum EPXAnimations {
+    //% block=Globe
+    Globe,
+    //% block=Weather
+    Weather,
+    //% block=ColorSpin
+    ColorSpin
+}
+
 namespace EPXDisplay {
 
     /**
      * Play an animation.
      */
-    //% blockId="expressivepixels_play" block="play animation %strip %anim" blockGap=8
+    //% blockId="expressivepixels_play" block="play animation $strip=variables_get(strip) %anim" blockGap=8
     //% weight=88
-    export function play(strip: neopixel.Strip, anim: Buffer) {
+    export function play(strip: neopixel.Strip, anim: EPXAnimations) {
+        switch(anim) {
+            case EPXAnimations.Globe: playBuffer(strip, spinningGlobe); break;
+            case EPXAnimations.Weather: playBuffer(strip, weather); break;
+            case EPXAnimations.ColorSpin: playBuffer(strip, smoothColorSpin); break;
+        }
+    }
+
+    export function playBuffer(strip: neopixel.Strip, anim: Buffer) {
             const length = anim.length;
             let palette = [];
 
