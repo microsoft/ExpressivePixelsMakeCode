@@ -136,4 +136,14 @@ namespace EPXDisplay {
                 this.strip.show();
             }
         }
+
+
+        //% blockId="EPXDisplay_create" block="Sparklet Display"
+        //% help=github:github.com/microsoft/ExpressivePixelsMakeCode/blob/master/HelpStartup.md
+        //% weight=90 blockGap=8
+        //% parts="EPXDisplay"
+        //% blockSetVariable=display
+        export function createMicrobitSparkletDisplay(): MicrobitSparkletDisplay {
+            return new MicrobitSparkletDisplay();
+        }
 }
