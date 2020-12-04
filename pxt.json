@@ -11,10 +11,12 @@
         "README.md",
         "EPXDisplay.ts",
         "animations.ts",
-        "test.ts",
         "animations2.ts",
         "animations3.ts",
         "animations4.ts"
+    ],
+    "testFiles": [
+        "test.ts"
     ],
     "public": true,
     "supportedTargets": [
