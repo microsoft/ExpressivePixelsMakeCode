@@ -2,19 +2,22 @@
 
 # Expressive Pixels for MakeCode
 
-Expressive Pixels provides support for MakeCode, enabling animations to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/):
+Expressive Pixels provides support for MakeCode, enabling animations to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the 16x16 full-color [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/):
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/sparkletPhoto.jpg" style="float: left;" />
 
 
 ## Add the Extension
 
-After creating a new MakeCode project, add the Expressive Pixels Extension by clicking on the Extensions button in the block picker, followed by searching for the word "expressive" (or entering the URL path to the Expressive Pixels GitHub location).
+After creating a new MakeCode project, add the Expressive Pixels Extension by clicking on the Extensions button in the block picker, followed by searching for the word "expressive" (or entering the URL of this repo - https://github.com/microsoft/ExpressivePixelsMakeCode).
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-Extension.png" style="float: left;" />
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-ExtensionURL.png" style="float: left;"  width="300"/>
 
-https://github.com/microsoft/ExpressivePixelsMakeCode 
+You should see that `EPXDisplay` and `Neopixel` are both added to the toolbox, as shown below:
+
+<img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/EPXDisplay-Neopixel.JPG" style="float: left;"/>
+
 
 ## Add Startup Blocks
 
@@ -37,11 +40,10 @@ Now download the MakeCode program to your device; the animation will play on you
 ## Using the NeoPixel strip as a matrix
 
 For the 16x16 Sparklet for the micro:bit, it's nice to be able to address the NeoPixel strip using
-(x,y) coordinates.  This can be done by first setting the width of the matrix and then using the
-plot function, as shown below.
+(x,y) coordinates.  This can be done by first calling `set matrix width` (16 in the case of the Sparklet) 
+and then calling `set matrix color` to set the color at specified (x,y) coordinates, as shown below:
 
-<img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/setMatrixWidth.jpg" style="float: left;" />
-
+<img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/setMatrixWidth.JPG" style="float: left;" />
 
 ## Supported targets
 
