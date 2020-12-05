@@ -45,6 +45,10 @@ and then calling `set matrix color` to set the color at specified (x,y) coordina
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/setMatrixWidth.JPG" style="float: left;" />
 
+The resulting image should look like this:
+
+<img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/redDiagonalLine.jpg" style="float: left;" />
+
 ## Supported targets
 
 * for PXT/microbit
