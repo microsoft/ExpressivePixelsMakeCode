@@ -18,7 +18,7 @@ https://github.com/microsoft/ExpressivePixelsMakeCode
 
 ## Add Startup Blocks
 
-Select the Neopixel section in the toolbox and create a strip with the proper number of pixels (256 for the Sparklet for the micro:bit).  From the Advanced pin section, add a digital write pin on P1 of value 1 turns on the display. Finally, from the EXPDisplay section, add the powerupclear block with low brightness ensures that the display is cleared and set to a nominal brightness.
+Select the Neopixel section in the toolbox and create a strip with the proper number of pixels (256 for the Sparklet for the micro:bit).  From the Advanced pin section, add a digital write pin on P1 of value 1 turns on the display. Finally, from the EPXDisplay section, add the powerupclear block with low brightness ensures that the display is cleared and set to a nominal brightness.
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-Startup.png" style="float: left;" />
 
@@ -26,7 +26,7 @@ Select the Neopixel section in the toolbox and create a strip with the proper nu
 
 In the Expressive Pixels applicaiton select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array (such as 16 x 16 for the Sparklet for the micro:bit). 
 
-In the MakeCode editor, switch over to the JavaScript tab <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-Javascript.png" style="float: left;" /> and paste in the declaration that is in the Windows Clipboard in the appropriate location below. Then call EXPDisplay.writeAnimation sending the strip and buffer as first and second parameters.  Finally, remember to call the show method on the strip!
+In the MakeCode editor, switch over to the JavaScript tab <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-Javascript.png" style="float: left;" /> and paste in the declaration that is in the Windows Clipboard in the appropriate location below. Then call `EPXisplay.writeAnimation` sending the strip and buffer as first and second parameters.  Finally, remember to call the show method on the strip!
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-JScript.png" style="float: left;" />
 
