@@ -1,11 +1,10 @@
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/EPXGitHubLockup.png" style="float: left; margin-right: 10px;" />
 
-# Expressive Pixels for MakeCode
+# Expressive Pixel Extension for MakeCode
 
-Expressive Pixels provides support for MakeCode, enabling animations create with the free [Expressive Pixels Windows App](https://www.microsoft.com/en-us/p/expressive-pixels/9mtc56w1rxqh) to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the 16x16 full-color [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/):
+The Expressive Pixels extension allows animations created with the free [Expressive Pixels Windows App](https://www.microsoft.com/en-us/p/expressive-pixels/9mtc56w1rxqh) to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs, such as the 16x16 [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/):
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/sparkletPhoto.jpg" style="float: left;" />
-
 
 ## Add the Extension
 
