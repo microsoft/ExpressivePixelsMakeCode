@@ -24,7 +24,7 @@ Select the Neopixel section in the toolbox and create a strip with the proper nu
 
 ## Copy the animation from Expressive Pixels application 
 
-In the Expressive Pixels applicaiton select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array (such as 16 x 16 for the Sparklet for the micro:bit). 
+In the Expressive Pixels application select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array (such as 16 x 16 for the Sparklet for the micro:bit). 
 
 In the MakeCode editor, switch over to the JavaScript tab <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-Javascript.png" style="float: left;" /> and paste in the declaration that is in the Windows Clipboard in the appropriate location below. Then call `EPXisplay.writeAnimation` sending the strip and buffer as first and second parameters.  Finally, remember to call the show method on the strip!
 
@@ -33,6 +33,15 @@ In the MakeCode editor, switch over to the JavaScript tab <img src="https://gith
 ## Download the MakeCode program to the device
 
 Now download the MakeCode program to your device; the animation will play on your LED display array. 
+
+## Using the NeoPixel strip as a matrix
+
+For the 16x16 Sparklet for the micro:bit, it's nice to be able to address the NeoPixel strip using
+(x,y) coordinates.  This can be done by first setting the width of the matrix and then using the
+plot function, as shown below.
+
+<img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/setMatrixWidth.jpg" style="float: left;" />
+
 
 ## Supported targets
 
