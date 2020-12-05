@@ -1,13 +1,6 @@
-/**
- * Well known colors for a NeoPixel strip
- */
 enum EPXAnimations {
-    //% block=Globe
-    Globe,
     //% block=Weather
-    Weather,
-    //% block=ColorSpin
-    ColorSpin
+    Weather
 }
 
 namespace EPXDisplay {
@@ -19,9 +12,9 @@ namespace EPXDisplay {
     //% weight=88
     export function play(strip: neopixel.Strip, anim: EPXAnimations) {
         switch(anim) {
-            case EPXAnimations.Globe: writeAnimation(strip, SpinningGlobe); break;
+            // case EPXAnimations.Globe: writeAnimation(strip, SpinningGlobe); break;
             case EPXAnimations.Weather: writeAnimation(strip, Weather); break;
-            case EPXAnimations.ColorSpin: writeAnimation(strip, ColorSpin); break;
+            // case EPXAnimations.ColorSpin: writeAnimation(strip, ColorSpin); break;
         }
         strip.show();
     }
