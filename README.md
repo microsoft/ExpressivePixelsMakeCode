@@ -19,27 +19,21 @@ Select the Expressive Pixels section in the block picker
 
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-EPXDisplay.png" style="float: left;" />
 
-Add the following blocks to the On Start section: The main Set EPXDisplay; A digital write pin on P1 i your display supports power enablement; and the powerupclear with low brightness to ensure the display array is cleared and set to a nominal brightness.
+Add the following blocks to the On Start section: The main Set EPXDisplay; A digital write pin on P1 of value 1 turns on the display; the powerupclear with low brightness ensures that the display is cleared and set to a nominal brightness.
 
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Startup.png" style="float: left;" />
 
 ## Copy the animation from Expressive Pixels application 
 
-In the Expressive Pixels applicaiton select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array such as 16 x 16.
+In the Expressive Pixels applicaiton select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array (such as 16 x 16 for the Sparklet for the micro:bit). 
 
 In the MakeCode editor, switch over to the JavaScript tab <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Javascript.png" style="float: left;" /> and paste in the declaration that is in the Windows Clipboard in the appropriate location below.
 
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-JScript.png" style="float: left;" />
 
-## Add a play trigger
-
-Going back to the Block editor, pick a trigger you wish to launch the animation from the Inputs block category, and specify the EPXDisplay play and show blocks. 
-
 ## Download the MakeCode program to the device
 
-Now download th MakeCode program to your device, when you press the button you specified as a play trigger, the animation will play on your LED display array. 
-
-<img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Button.png" style="float: left;" />
+Now download the MakeCode program to your device; the animation will play on your LED display array. 
 
 ## Supported targets
 
