@@ -15,7 +15,7 @@ namespace EPXDisplay {
     /**
      * Play an animation.
      */
-    //% blockId="expressivepixels_play" block="play animation $strip=variables_get(strip) %anim" blockGap=8
+    //% blockId="expressivepixels_play" block="$strip=variables_get(strip)|play animation %anim" blockGap=8
     //% weight=88
     export function play(strip: neopixel.Strip, anim: EPXAnimations) {
         switch(anim) {
