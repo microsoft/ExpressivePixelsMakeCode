@@ -2,11 +2,14 @@
 
 # Expressive Pixels for MakeCode
 
-Expressive Pixels provides support for MakeCode, enabling animations to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/).
+Expressive Pixels provides support for MakeCode, enabling animations to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/):
+
+<img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/sparkletPhoto.jpg" style="float: left;" />
+
 
 ## Add the Extension
 
-After creating you new MakeCode project, add the Expressive Pixels Extension by clicking on the Extensions button in the block picker, followed by entering the URL path to the Expressive Pixels GitHub location.
+After creating a new MakeCode project, add the Expressive Pixels Extension by clicking on the Extensions button in the block picker, followed by searching for the word "expressive" (or entering the URL path to the Expressive Pixels GitHub location).
 
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Extension.png" style="float: left;" />
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-ExtensionURL.png" style="float: left;"  width="300"/>
@@ -15,11 +18,7 @@ https://github.com/microsoft/ExpressivePixelsMakeCode
 
 ## Add Startup Blocks
 
-Select the Expressive Pixels section in the block picker
-
-<img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-EPXDisplay.png" style="float: left;" />
-
-Add the following blocks to the On Start section: The main Set EPXDisplay; A digital write pin on P1 of value 1 turns on the display; the powerupclear with low brightness ensures that the display is cleared and set to a nominal brightness.
+Select the Neopixel section in the toolbox and create a strip with the proper number of pixels (256 for the Sparklet for the micro:bit).  From the Advanced pin section, add a digital write pin on P1 of value 1 turns on the display. Finally, from the EXPDisplay section, add the powerupclear block with low brightness ensures that the display is cleared and set to a nominal brightness.
 
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Startup.png" style="float: left;" />
 
@@ -27,7 +26,7 @@ Add the following blocks to the On Start section: The main Set EPXDisplay; A dig
 
 In the Expressive Pixels applicaiton select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array (such as 16 x 16 for the Sparklet for the micro:bit). 
 
-In the MakeCode editor, switch over to the JavaScript tab <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Javascript.png" style="float: left;" /> and paste in the declaration that is in the Windows Clipboard in the appropriate location below.
+In the MakeCode editor, switch over to the JavaScript tab <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-Javascript.png" style="float: left;" /> and paste in the declaration that is in the Windows Clipboard in the appropriate location below. Then call EXPDisplay.writeAnimation sending the strip and buffer as first and second parameters.  Finally, remember to call the show method on the strip!
 
 <img src="https://github.com/microsoft/ExpressivePixels/blob/master/images/Docs-MakeCode-JScript.png" style="float: left;" />
 
