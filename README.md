@@ -2,7 +2,7 @@
 
 # Expressive Pixels for MakeCode
 
-Expressive Pixels provides support for MakeCode, enabling animations to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs.
+Expressive Pixels provides support for MakeCode, enabling animations to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/).
 
 ## Add the Extension
 
