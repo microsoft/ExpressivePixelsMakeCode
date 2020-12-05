@@ -2,7 +2,7 @@
 
 # Expressive Pixels for MakeCode
 
-Expressive Pixels provides support for MakeCode, enabling animations to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the 16x16 full-color [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/):
+Expressive Pixels provides support for MakeCode, enabling animations create with the free [Expressive Pixels Windows App](https://www.microsoft.com/en-us/p/expressive-pixels/9mtc56w1rxqh) to be rendered on display arrays based on WS2812B (NeoPixels) RGB LEDs. For example, see the 16x16 full-color [Sparklet for the micro:bit](https://siliconsquared.com/sparkletmicrobit/):
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/sparkletPhoto.jpg" style="float: left;" />
 
@@ -27,7 +27,7 @@ Select the Neopixel section in the toolbox and create a strip with the proper nu
 
 ## Copy the animation from Expressive Pixels application 
 
-In the Expressive Pixels application select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array (such as 16 x 16 for the Sparklet for the micro:bit). 
+In the [Expressive Pixels application](https://www.microsoft.com/en-us/p/expressive-pixels/9mtc56w1rxqh) select the 'Copy Programmable MakeCode Binary declaration to Clipboard' ellipsis menuitem for the animation you wish to display on your MakeCode device's display. Specify the dimensions of your display array (such as 16 x 16 for the Sparklet for the micro:bit). 
 
 In the MakeCode editor, switch over to the JavaScript tab <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-Javascript.png" style="float: left;" /> and paste in the declaration that is in the Windows Clipboard in the appropriate location below. Then call `EPXisplay.writeAnimation` sending the strip and buffer as first and second parameters.  Finally, remember to call the show method on the strip!
 
