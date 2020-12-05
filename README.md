@@ -21,7 +21,7 @@ You should see that `EPXDisplay` and `Neopixel` are both added to the toolbox, a
 
 ## Add Startup Blocks
 
-Select the Neopixel section in the toolbox and create a strip with the proper number of pixels (256 for the Sparklet for the micro:bit).  From the Advanced pin section, add a digital write pin on P1 of value 1 turns on the display. Finally, from the EPXDisplay section, add the powerupclear block with low brightness ensures that the display is cleared and set to a nominal brightness.
+Select the Neopixel section in the toolbox and create a strip with the proper number of pixels (256 for the Sparklet for the micro:bit).  From the Advanced pin section, add a digital write pin on P1 of value 1 to turn on the Sparklet display. Finally, from the EPXDisplay section, add the powerupclear block with low brightness ensures that the display is cleared and set to a nominal brightness.
 
 <img src="https://github.com/microsoft/ExpressivePixelsMakeCode/blob/master/images/Docs-MakeCode-Startup.png" style="float: left;" />
 
